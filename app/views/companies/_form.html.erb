@@ -21,6 +21,11 @@
     <%= form.text_field :siret, id: :company_siret %>
   </div>
 
+  <div class="field">
+    <%= form.label :step %>
+    <%= form.select :step_id, Config::Step.all.collect {|s| [ s.step_name, s.id ] }, id: :company_step_id %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
