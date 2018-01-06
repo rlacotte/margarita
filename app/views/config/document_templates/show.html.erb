@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Document name:</strong>
+  <%= @config_document_template.document_name %>
+</p>
+
+<p>
+  <strong>Document type:</strong>
+  <%= @config_document_template.document_type %>
+</p>
+
+<%= link_to 'Edit', edit_config_document_template_path(@config_document_template) %> |
+<%= link_to 'Back', config_document_templates_path %>

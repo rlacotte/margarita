@@ -1,0 +1,27 @@
+<%= form_with(model: config_document_template, local: true) do |form| %>
+  <% if config_document_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(config_document_template.errors.count, "error") %> prohibited this config_document_template from being saved:</h2>
+
+      <ul>
+      <% config_document_template.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :document_name %>
+    <%= form.text_field :document_name, id: :config_document_template_document_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :document_type %>
+    <%= form.text_field :document_type, id: :config_document_template_document_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

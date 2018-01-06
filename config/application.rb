@@ -27,5 +27,8 @@ module Margarita
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.generators do |g|
+      g.assets false
+    end
   end
 end
