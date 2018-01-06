@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @steps = Config::Step.all
   end
 
   # GET /companies/new
@@ -69,6 +70,6 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:company, :siret)
+      params.require(:company).permit(:company, :siret, :step_id)
     end
 end

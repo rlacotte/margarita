@@ -2,5 +2,22 @@
 
 <h1><%= @company.company %></h1>
 
-<%# link_to 'Edit', edit_company_path(@company) %> |
+<h4>Mon contact commercial chez Plezi:</h4>
+Claire Kilic<br>
+claire.kilic@plezi.co<br>
+06 06 06 06 06
+
+
+<h4>Mon process</h4>
+<% @steps.each do |step| %>
+  <% if @company.step_id == step.id %>
+    <b><%= step.step_name %></b>
+  <% else %>
+    <%= step.step_name %>
+  <% end %>
+<% end %>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
 <%# link_to 'Back', companies_path %>
+
+<h4>Mes documents</h4>

@@ -1,0 +1,22 @@
+<%= form_with(model: config_step, local: true) do |form| %>
+  <% if config_step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(config_step.errors.count, "error") %> prohibited this config_step from being saved:</h2>
+
+      <ul>
+      <% config_step.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :step_name %>
+    <%= form.text_field :step_name, id: :config_step_step_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

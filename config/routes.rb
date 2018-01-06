@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :document_templates
+  namespace :config do
+    resources :steps
+  end
+  resources :documents
+  namespace :config do
+    resources :document_templates
+  end
   resources :events
   resources :contacts
   resources :companies
