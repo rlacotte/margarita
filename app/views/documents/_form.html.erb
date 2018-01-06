@@ -21,6 +21,11 @@
     <%= form.text_field :document_type, id: :document_document_type %>
   </div>
 
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.file_field :file, id: :document_file %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

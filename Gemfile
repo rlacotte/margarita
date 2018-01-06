@@ -50,3 +50,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mongoid', '~> 6.2.0'
 gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'

@@ -10,5 +10,9 @@
   <%= @document.document_type %>
 </p>
 
+<strong>File:</strong>
+<%= link_to @document.file, @document.file_url %>
+</p>
+
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
