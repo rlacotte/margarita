@@ -11,22 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :document_name %>
-    <%= form.text_field :document_name, id: :document_document_name %>
+  <%= link_to "Add from the library" %><br>
+  <%= link_to "Add from your computer" %>
+
+  <div id="templates" class="">
+    <% Config::DocumentTemplate.all.each do |dt| %>
+      <%= dt.document_name %>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= form.label :document_type %>
-    <%= form.text_field :document_type, id: :document_document_type %>
-  </div>
+  <div id="computer" class="">
+    <div class="field">
+      <%= form.label :document_name %>
+      <%= form.text_field :document_name, id: :document_document_name %>
+    </div>
 
-  <div class="field">
-    <%= form.label :file %>
-    <%= form.file_field :file, id: :document_file %>
-  </div>
+    <div class="field">
+      <%= form.label :document_type %>
+      <%= form.text_field :document_type, id: :document_document_type %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="field">
+      <%= form.label :file %>
+      <%= form.file_field :file, id: :document_file %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
