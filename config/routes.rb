@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "/pages/*page" => "pages#show"
+  devise_for :users
+  devise_scope :user do
+    root 'pages#show', page: "home_user"
+  end
+  root "pages#show", page: "home"
+
   namespace :config do
     resources :steps
   end
